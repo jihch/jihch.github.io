@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>JDBC insert 之后返回id</title>
+</head>
+<body>
+<h3>JDBC insert 之后返回id</h3>
+
+<pre>
+  public int save(TimingShelving timingShelving) {
+      String sql = "INSERT INTO t_timing_shelving "
+	        + "(base_goods_id, goods_id, goods_name, file_url, price, parent_category_id, child_category_id, "
+		      + "put_goods_on_shelf_date, take_goods_down_from_shelf_date, create_date, change_date, state) "
+	        + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+      Connection con = null;
+      PreparedStatement pstmt = null;
+      ResultSet resultSet = null;
+      Integer id = null;
+      try {
+          con = ConnectionManager.getDataSourceConnection(DataSourceName.DSN_GUAGUA_GOODS);
+          pstmt = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+          pstmt.setInt(1, timingShelving.getBaseGoodsId());
+          pstmt.setInt(2, timingShelving.getGoodsId());
+          pstmt.setString(3, timingShelving.getGoodsName());
+          pstmt.setString(4, timingShelving.getIcon());
+          pstmt.setBigDecimal(5, timingShelving.getPrice());
+          pstmt.setInt(6, timingShelving.getEndpoint().getId());
+          pstmt.setInt(7, timingShelving.getGiftShelf().getId());
+          pstmt.setLong(8, timingShelving.getPutGoodsOnShelfDate().getTime());
+          pstmt.setLong(9, timingShelving.getTakeGoodsDownFromShelfDate().getTime());
+          pstmt.setLong(10, new Date().getTime());
+          pstmt.setLong(11, new Date().getTime());
+          pstmt.setInt(12, 0);
+          pstmt.executeUpdate();
+          resultSet = pstmt.getGeneratedKeys();
+          resultSet.next();
+          id = resultSet.getInt(1);
+      } catch (Exception e) {
+          logger.error("add t_timing_shelving has an exception: ", e);
+      } finally {
+          ConnectionManager.closeConnection(resultSet, pstmt, con);
+      }
+      return id;
+  }
+</pre>
+</body>
+</html>
