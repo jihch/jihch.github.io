@@ -1,0 +1,18 @@
+#Rules > Customize Rules...
+static function OnBeforeRequest(oSession: Session) {
+    //以下是加入的内容
+
+    //sample1:
+    if (oSession.HostnameIs("xxx.xxx.xx.xxx:xxxx")) {
+			oSession.bypassGateway = true;
+			oSession["x-overrideHost"] = "xx.xx.xx.xx:xx";
+		}
+
+    //sample2:
+    if (oSession.HostnameIs("www.baidu.com")) {
+			oSession.bypassGateway = true;
+			oSession["x-overrideHost"] = "xx.xx.xx.xx:xx";
+		}
+
+    //以上是添加的内容
+}
