@@ -1,0 +1,72 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{
+	margin: 0;padding: 0;
+	}
+body,table,tr,td,input,div{
+	font-size: 13px;line-height: 24px;
+	}
+*{
+	margin:0;
+	padding:0;
+	font-family: "微软雅黑";
+}
+html{
+	overflow-y: scoll;overflow: -moz-scrollbars-vertical;
+	}
+#con{
+	/*width: 755px;height: 360px;*/
+	width:1198px;
+	height:716px;
+	}
+#con, .pic{
+	background-color: #F8F8F8;
+	}
+.pic{
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	border: 2px solid #F8F8F8;
+	background-size:100% 100%;
+	}
+	a{
+		text-decoration:none;
+	}
+
+/*背景样式*/
+body{
+	width:100%;
+}
+.box{
+	height:978px;
+	width:100%;
+	min-width:1333px;
+	background:url(../img/bgm.jpg) no-repeat;
+	background-size:100% 100%;
+
+	font-size:16px;
+}
+.box .toper{
+	margin:0 auto;
+	line-height:36px;
+	width:1200px;
+	height:36px;
+	border-bottom:1px dashed #999999;
+}
+.box .points{
+	width:50px;
+	height:25px;
+	border-radius:10px;
+	border:2px solid red;
+	line-height:25px;
+	text-align:center;
+}
+.toper span:nth-of-type(3) a{
+	color:red;
+}
+.box .content{
+	width:1198px;
+	height:716px;
+	border:1px solid #a0a0a0;
+	margin:0 auto;
+	margin-top:91px;
+	background:#FFFFFF;
+}
