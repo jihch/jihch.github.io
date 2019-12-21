@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<title>我的第一个 HTML 页面</title>
+</head>
+
+<body>
+  <ul>
+    <li>
+      <a href="https://jihch.github.io/software.html">软件</a>
+    </li>
+    <li>
+      <a href="https://jihch.github.io/ngrok">ngrok(反向代理、内网穿透)</a>
+    </li>
+    <li>
+       <a href="https://mitmproxy.org/">mitmprxy(代理,有Python接口,可进行自定义编码实现处理请求、应答)</a>
+    </li>
+    <li>
+      <a href="http://www.squid-cache.org/">squid(代理，不太适合自定义编码，但作为代理服务器功能全面、且被广泛使用)</a>
+    </li>
+    <li>
+      <a href="https://jihch.github.io/jdbc_insert_return_id.html">JDBC insert 之后返回id</a>
+    </li>
+    <li>
+      <a href="https://blog.csdn.net/samjustin1/article/details/52210125">数据库锁机制</a>
+    </li>
+    <li>
+      <a href="https://jihch.github.io/base64.html">BASE64</a>
+    </li>
+    <li>
+      <a href="https://ffmpeg.org/">以后视频文件转格式还要啥IDE啊</a>
+    </li>
+    <li>
+      <a href="https://www.cnblogs.com/hanruyue/p/5859107.html">字符集啊，字符集，真是一个老大难</a>
+    </li>
+    <li>
+      <a href="https://jihch.github.io/upload_image_preview.html">上传图片预览</a>
+    </li>
+    <li>
+      <a href="http://upload-images.jianshu.io/upload_images/5954965-4167ef0715fb06c1?imageMogr2/auto-orient/strip%7CimageView2/2/w/945/format/webp">一张图说明slf4j</a>
+    </li>
+    <li>
+      <a href="https://stackoverflow.com/questions/10117788/how-to-setup-commons-logging-to-use-logback">关于commons-logging和slf4j</a>
+    </li>
+    <li>
+        <a href="https://jihch.github.io/front_trick/index.html">前端小把戏</a>
+    </li>
+    <li>
+        <a href="https://jihch.github.io/java_trick/index.html">Java小把戏</a>
+    </li>
+  </ul>
+
+</body>
+
+</html>
